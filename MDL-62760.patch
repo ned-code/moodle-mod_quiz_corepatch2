@@ -1,0 +1,24 @@
+Index: mod/quiz/mod_form.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- mod/quiz/mod_form.php	(date 1575271738000)
++++ mod/quiz/mod_form.php	(date 1579163821000)
+@@ -242,9 +242,16 @@
+                 'neq', 'wontmatch');
+         $mform->disabledIf('overallfeedbackduring', 'preferredbehaviour',
+                 'neq', 'wontmatch');
++
++        /*
++         * This options can be necessary for overrides, even if timeclose option is off
++         * see MDL-62760
++         */
++        /*
+         foreach (self::$reviewfields as $field => $notused) {
+             $mform->disabledIf($field . 'closed', 'timeclose[enabled]');
+         }
++        */
+ 
+         // -------------------------------------------------------------------------------
+         $mform->addElement('header', 'display', get_string('appearance'));
