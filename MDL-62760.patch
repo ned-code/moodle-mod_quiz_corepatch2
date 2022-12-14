@@ -11,7 +11,7 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
                  'neq', 'wontmatch');
 +
 +        /*
-+         * This options can be necessary for overrides, even if timeclose option is off
++         * This option allows Review Options (in Quiz settings page) to be changed even if timeclose option is off
 +         * see MDL-62760
 +         */
 +        /*
